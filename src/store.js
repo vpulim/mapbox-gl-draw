@@ -308,7 +308,7 @@ Store.prototype.storeMapConfig = function() {
   interactions.forEach((interaction) => {
     const interactionSet = this.ctx.map[interaction];
     if (interactionSet) {
-      this._mapInitialConfig[interaction] = this.ctx.map[interaction].isEnabled();
+      this._mapInitialConfig[interaction] = !!this.ctx.map[interaction].isEnabled();
     }
   });
 };
